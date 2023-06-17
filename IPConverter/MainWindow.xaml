@@ -1,0 +1,165 @@
+﻿<Window x:Class="IPConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPConverter"
+        mc:Ignorable="d"        
+        FontSize="20" Background="#4d92bd"
+        Title="IP Converter" Height="620" Width="454">
+    <Grid>
+        <!-- grid columns and rows are created -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <!-- the grid is populated with elements (textblocks,
+        textboxes, buttons, etc-->
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="28"
+                   FontWeight="DemiBold" Text="IP Address Converter"
+                   HorizontalAlignment="Center"
+                   Grid.ColumnSpan="7"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="2" FontSize="22"
+                   Text="Numeral to binary *" 
+                   Grid.ColumnSpan="7" Margin="0, 30, 0, 20"/>
+
+        <TextBox x:Name="firstOctetTBox" Grid.Column="1" 
+                 Grid.Row="3" Width="50" TextAlignment="Center"
+                 MaxLength="3"/>
+        <TextBlock Grid.Column="2" Grid.Row="3" Text="."
+                   Margin="3, 0, 3, 0"/>
+        <TextBox x:Name="secondOctetTBox" Grid.Column="3" 
+                 Grid.Row="3" Width="50" TextAlignment="Center"
+                 MaxLength="3"/>
+        <TextBlock Grid.Column="4" Grid.Row="3" Text="."
+                   Margin="3, 0, 3, 0"/>
+        <TextBox x:Name="thirdOctetTBox" Grid.Column="5" 
+                 Grid.Row="3" Width="50" TextAlignment="Center"
+                 MaxLength="3"/>
+        <TextBlock Grid.Column="6" Grid.Row="3" Text="."
+                   Margin="3, 0, 3, 0"/>
+        <TextBox x:Name="fourthOctetTBox" Grid.Column="7" 
+                 Grid.Row="3" Width="50" TextAlignment="Center"
+                 MaxLength="3"/>
+
+        <TextBlock Name="firstBinaryTBlock" Grid.Column="1" 
+                   Grid.Row="4" Width="92" Margin="0,20,0,0"/>
+        <TextBlock Grid.Column="2" Grid.Row="4" Text="."
+                   Margin="3, 20, 3, 0"/>
+        <TextBlock Name="secondBinaryTBlock" Grid.Column="3" 
+                   Grid.Row="4" Width="92" Margin="0,20,0,0"/>
+        <TextBlock Grid.Column="4" Grid.Row="4" Text="."
+                   Margin="3, 20, 3, 0"/>
+        <TextBlock Name="thirdBinaryTBlock" Grid.Column="5" 
+                   Grid.Row="4" Width="92" Margin="0,20,0,0"/>
+        <TextBlock Grid.Column="6" Grid.Row="4" Text="."
+                   Margin="3, 20, 3, 0"/>
+        <TextBlock Name="fourthBinaryTBlock" Grid.Column="7" 
+                   Grid.Row="4" Width="92" Margin="0,20,0,0"/>
+
+        <!-- Octet to binary Convert button -->
+        <Button x:Name="OctToBinSubmitBtn" Content="Convert" 
+                Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="7"
+                Width="150" Margin="0,20,0,0" FontWeight="DemiBold"
+                HorizontalAlignment="Center" 
+                Click="OctToBinSubmitBtn_Click"/>
+
+        <!-- Octet to binary Copy button (will copy result to 
+        clipboard) -->
+        <Button x:Name="CopyBinaryBtn" Content="Copy" Grid.Row="5" 
+                Grid.Column="7" FontSize="12" FontWeight="DemiBold"
+                Height="24" Width="50" HorizontalAlignment="Right" 
+                Click="CopyBinaryBtn_Click"/>
+
+
+        <TextBlock Grid.Column="1" Grid.Row="6" FontSize="22"
+                   Text="Binary to numeral **" 
+                   Grid.ColumnSpan="7" Margin="0, 50, 0, 20"/>
+
+        <TextBox Name="firstBinaryTBox" Grid.Column="1" 
+                 Grid.Row="7" TextAlignment="Center"
+                 MaxLength="8"/>
+        <TextBlock Grid.Column="2" Grid.Row="7" Text="."
+                   HorizontalAlignment="Center"/>
+        <TextBox Name="secondBinaryTBox" Grid.Column="3" 
+                 Grid.Row="7" TextAlignment="Center"
+                 MaxLength="8"/>
+        <TextBlock Grid.Column="4" Grid.Row="7" Text="."
+                   HorizontalAlignment="Center"/>
+        <TextBox Name="thirdBinaryTBox" Grid.Column="5" 
+                 Grid.Row="7" TextAlignment="Center"
+                 MaxLength="8"/>
+        <TextBlock Grid.Column="6" Grid.Row="7" Text="."
+                   HorizontalAlignment="Center"/>
+        <TextBox Name="fourthBinaryTBox" Grid.Column="7" 
+                 Grid.Row="7" TextAlignment="Center"
+                 MaxLength="8"/>
+
+        <TextBlock x:Name="firstOctetTBlock" Grid.Column="1" 
+                   Grid.Row="8"  HorizontalAlignment="Center"
+                   Margin="0,20,0,0"/>
+        <TextBlock Grid.Column="2" Grid.Row="8" Text="."
+                   Margin="3, 20, 3, 0" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="secondOctetTBlock" Grid.Column="3" 
+                   Grid.Row="8"  HorizontalAlignment="Center"
+                   Margin="0,20,0,0"/>
+        <TextBlock Grid.Column="4" Grid.Row="8" Text="."
+                   Margin="5, 20, 3, 0" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="thirdOctetTBlock" Grid.Column="5" 
+                   Grid.Row="8"  HorizontalAlignment="Center"
+                   Margin="0,20,0,0"/>
+        <TextBlock Grid.Column="6" Grid.Row="8" Text="."
+                   Margin="5, 20, 3, 0" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="fourthOctetTBlock" Grid.Column="7" 
+                   Grid.Row="8" HorizontalAlignment="Center"
+                   Margin="0,20,0,0"/>
+
+        <!-- Binary to octet Convert button -->
+        <Button x:Name="BinToOctSubmitBtn" Content="Convert" 
+                Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="7"
+                Width="150" Margin="0,20,0,0" FontWeight="DemiBold"
+                HorizontalAlignment="Center" 
+                Click="BinToOctSubmitBtn_Click"/>
+
+        <!-- Binary to octet Copy button (will copy result to 
+        clipboard) -->
+        <Button x:Name="CopyOctetBtn" Content="Copy" Grid.Row="9" 
+                Grid.Column="7" FontSize="12" FontWeight="DemiBold"
+                Height="24" Width="50" HorizontalAlignment="Right" 
+                Click="CopyOctetBtn_Click"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="10" FontSize="14"
+                   Text="* Accepted values 1.0.0.0 to 255.255.255.255" 
+                   Grid.ColumnSpan="7" Margin="0, 25, 0, 0"/>
+        <TextBlock Grid.Column="1" Grid.Row="11" FontSize="14"
+                   Text="** Accepted values 00000001.00000000.00000000.00000000 to &#x0a; 11111111.11111111.11111111.11111111" 
+                   Grid.ColumnSpan="7"/>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPConverter", "IPConverter\IPConverter.csproj", "{49D4C2D3-726C-4E72-A72D-E4D867CDE759}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49D4C2D3-726C-4E72-A72D-E4D867CDE759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D4C2D3-726C-4E72-A72D-E4D867CDE759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D4C2D3-726C-4E72-A72D-E4D867CDE759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D4C2D3-726C-4E72-A72D-E4D867CDE759}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EC49E78-F6B6-4934-99A2-D2A8FACDF19A}
+	EndGlobalSection
+EndGlobal
