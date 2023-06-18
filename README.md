@@ -1,4 +1,4 @@
-<h2> IP address convertor </h2>
+<h2> IP address converter </h2>
 
 <h3> Description </h3>
 
